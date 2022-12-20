@@ -16,14 +16,11 @@ function App() {
       <NavBar/>
     < div classname="content">
       <Home/>
-     <h1>App Component</h1>
+     {/*<h1>App Component</h1>*/}
      
-     <h2>{ title }</h2>
-     <p> Liked {likes} times </p>
+     {/*<h2>{ title }</h2>*/}
+     {/*<p> Liked {likes} times </p>*/}
     {/*<p> Blog owned by {person }</p>*/}
-    <p>{3 + 4}</p>
-    <p>{Math.random() * 20}</p>
-    <a href={link} >Google Site </a>
     </div>
     </div>
   );
