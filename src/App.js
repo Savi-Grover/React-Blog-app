@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import NavBar from './Navbar';
+import Home from './Home';
 function App() {
 
   //declare title as const
@@ -12,7 +13,9 @@ function App() {
   //const person = { firstname: 'savi',lastname: 'grover'};
   return (
     <div className="App">
+      <NavBar/>
     < div classname="content">
+      <Home/>
      <h1>App Component</h1>
      
      <h2>{ title }</h2>
