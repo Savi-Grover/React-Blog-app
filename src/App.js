@@ -1,8 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import NavBar from './Navbar';
 import Home from './Home';
 import Article from './Article';
+import { useState } from 'react';
+
 function App() {
 
   //declare title as const
