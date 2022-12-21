@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import BlogList from './BlogList';
 const Home = () => {
 
     const[blogs,setBlogs]= useState([
@@ -9,35 +9,12 @@ const Home = () => {
 
     ]);
 
-const handleClick=()=> {
-    console.log('hello all');
-}
-
-const handleClickAgain=(name)=> {
-    console.log('hello' + name);
-}
 
     return (  
 <div className="home">
 
-{blogs.map((blogtoshow)=>(
-<div className="blog-preview" key={blogtoshow.id}>
-<h2>{ blogtoshow.title}</h2>
-<p>Written by {blogtoshow.author}</p>
+<BlogList blogs={blogs} title="All Blogs!"/> 
 </div>
 )
-)}
-
-
-    {/*<h2>Homepage< a href="/" style={{color: "purple"}}>Content</a></h2>*/}
-    <button onClick={handleClick}>Click me</button>
-    <button onClick={
-        ()=>{handleClickAgain('savi')}
-        }>Click me again</button>
-
-
-</div>
-    );
 }
- 
 export default Home;

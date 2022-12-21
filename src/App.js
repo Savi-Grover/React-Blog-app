@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './Navbar';
 import Home from './Home';
 import Article from './Article';
-import { useState } from 'react';
+import BlogList from './BlogList';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-    < div classname="content">
+    <div classname="content">
       <Home/>
      {/*<h1>App Component</h1>*/}
      
