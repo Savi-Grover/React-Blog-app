@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+//import { useState } from 'react';
+//import { useEffect } from 'react';
 import BlogList from './BlogList';
-const Home = () => {
+import useFetch from './useFetch';
 
-    const[blogs,setBlogs]= useState(null);
-    const[isLoading,setLoading]=useState(true);
-    const[isError,setError]=useState(null);
+const Home = () => {
+const {data : blogs, isLoading, isError}=useFetch('http://localhost:8000/blogs');
+    
 
     //const [name, setName]=useState('mario');
 //     const handleDelete = (id)=>{
@@ -13,27 +13,7 @@ const Home = () => {
 //     setBlogs(newBlogs)
     
 // }
-useEffect(()=> {
-setTimeout(() => {
-    fetch('http://localhost:8000/blogs')
-.then(res => {
-    console.log(res);
-    if (!res.ok){
-throw Error('could not fetch the data from resource')
-    }
-    return res.json();
-})
-.then( data =>{
-    console.log(data);
-    setBlogs(data);
-    setLoading(false);
-    setError(null);
-}).catch(err => {
-    //console.log(err.message);
-    setError(err.message);
-})
-}, 1);
-}, []);
+
     return (  
 <div className="home">
 {isLoading && <div>Loading....</div>}
