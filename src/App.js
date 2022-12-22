@@ -4,6 +4,9 @@ import NavBar from './Navbar';
 import Home from './Home';
 import Article from './Article';
 import BlogList from './BlogList';
+import NewBlog from './NewBlog';
+import Contact from './Contact';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 
@@ -15,10 +18,21 @@ function App() {
   //decalre an object
   //const person = { firstname: 'savi',lastname: 'grover'};
   return (
+    <Router>
     <div className="App">
       <NavBar/>
     <div classname="content">
-      <Home/>
+      <Switch>
+        <Route exact path='/'>
+        <Home/>
+        </Route>
+        <Route exact path='/create'>
+        <NewBlog/>
+        </Route>
+        <Route exact path='/contact'>
+        <Contact/>
+        </Route>
+      </Switch>
      {/*<h1>App Component</h1>*/}
      
      {/*<h2>{ title }</h2>*/}
@@ -27,6 +41,7 @@ function App() {
     </div>
     <Article/>
     </div>
+    </Router>
   );
 }
 
