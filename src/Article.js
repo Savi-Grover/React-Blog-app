@@ -14,11 +14,11 @@ const handleClick =() =>{
     return (  
 
 <div>
-    <h2>Article Body</h2>
+    {/* <h2>Article Body</h2>
     <p>
         {name} is {age} years old
     </p>
-    <button onClick={handleClick}>Button on Article</button>
+    <button onClick={handleClick}>Button on Article</button> */}
 </div>
 
     );

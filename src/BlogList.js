@@ -1,7 +1,7 @@
 const BlogList =(props) => {
     const blogs =props.blogs;
     const title=props.title;
-    const handleDelete=props.handleDelete;
+    //const handleDelete=props.handleDelete;
 
 
  
@@ -13,7 +13,7 @@ const BlogList =(props) => {
 <h2>{ blog.title}</h2>
 <p>Written by {blog.author}</p>
 {/*deletion as functional prop*/}
-<button onClick={()=>handleDelete(blog.id)}>Delete Blog</button>
+{/*<button onClick={()=>handleDelete(blog.id)}>Delete Blog</button>*/}
 </div>
 ))}
 </div>
