@@ -2,15 +2,15 @@ import { useState } from "react";
 
 const Article = () => {
 //let name ='mario';
-const [name, setName]=useState('mario');
-const [age, setAge] = useState(25);
+//const [name, setName]=useState('mario');
+//const [age, setAge] = useState(25);
 
-const handleClick =() =>{
-    //name ='luigi'
-    //console.log(name);
-    setName('luigi');
-    setAge(30);
-}
+// const handleClick =() =>{
+//     //name ='luigi'
+//     //console.log(name);
+//     setName('luigi');
+//     setAge(30);
+// }
     return (  
 
 <div>
